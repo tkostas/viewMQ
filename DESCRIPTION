@@ -15,7 +15,8 @@ Imports:
     plyr,
     Rcpp,
     reshape2,
-    scales
+    scales,
+    tibble
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
