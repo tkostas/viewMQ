@@ -6,6 +6,7 @@ Description: Includes a set of functions aiming to simplify and speedup the expl
     data visualization phase of a proteomics analysis, using MaxQuant platform.
 Depends: R (>= 3.4.0)
 Imports:
+    colorspace,
     dplyr,
     ggplot2,
     gtable,
