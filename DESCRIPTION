@@ -1,6 +1,6 @@
 Package: viewMQ
 Title: Visualization of MaxQuant output files for proteomics studies
-Version: 0.0.0.9000
+Version: 0.1.1
 Authors@R: person("Kostas", "Tsolis", email = "kostas.tsolis@zoho.com", role = c("aut", "cre"))
 Description: Includes a set of functions aiming to simplify and speedup the exploratory 
     data visualization phase of a proteomics analysis, using MaxQuant platform.
