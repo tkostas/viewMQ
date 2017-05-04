@@ -11,6 +11,7 @@ Imports:
     ggplot2,
     gtable,
     munsell,
+    plyr,
     Rcpp,
     reshape2,
     scales
