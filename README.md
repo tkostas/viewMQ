@@ -1,5 +1,6 @@
 # viewMQ
-more info will be added soon...
+Includes a set of functions aiming to simplify and speedup the exploratory 
+data visualization phase of a proteomics analysis, using MaxQuant platform.
 
 To install the package type:
 ```
