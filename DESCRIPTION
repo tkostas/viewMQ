@@ -9,6 +9,7 @@ Depends:
     ggplot2
 Imports:
     colorspace,
+    DBI,
     dplyr,
     ggplot2,
     gtable,
