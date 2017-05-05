@@ -7,3 +7,7 @@ To install this package type:
 install.packages("devtools")
 devtools::install_github("tkostas/viewMQ", dependencies = TRUE)
 ```
+To use it type:
+```
+library(viewMQ)
+```
