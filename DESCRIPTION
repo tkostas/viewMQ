@@ -5,7 +5,7 @@ Authors@R: person("Kostas", "Tsolis", email = "kostas.tsolis@zoho.com", role = c
 Description: Includes a set of functions aiming to simplify and speedup the exploratory 
     data visualization phase of a proteomics analysis, using MaxQuant platform.
 Depends: 
-    R (>= 3.4.0),
+    R (>= 3.0.0),
     ggplot2
 Imports:
     colorspace,
