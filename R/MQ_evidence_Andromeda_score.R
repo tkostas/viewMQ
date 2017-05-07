@@ -6,7 +6,7 @@
 #'
 #' @param x The filtered 'evidence.txt' file. Use MQ_remove_CR first to remove contaminants and reverse hits.
 #'
-#' @example
+#' @examples
 #' MQ_evidence_Andromeda_score(filtered_evidence_output)
 #'
 #' @export

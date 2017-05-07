@@ -1,14 +1,21 @@
 #'Percent of MSMS spectra identified using MaxQuant summary output
 #'
 #'@description Reads MaxQuant summary.txt output file and plots the percentage
-#'  of spectra matched to peptides. Use the `add_groups` function first to add groups
-#'  based on the experiment name, and color the different raw files based on the groups.
+#'    of spectra matched to peptides. Use the `add_groups` function first to add groups
+#'    based on the experiment name, and color the different raw files based on the groups.
 #'
 #'@param x The processed summary.txt output file
+#'@param grouping Default value is FALSE. If set to true, the different experiments
+#'    will be colored based on the `my_groups` column. Use \code{\link{add_groups}} function
+#'    to define the groups based on experiment names.
 #'
 #'@export
-MQ_summary_MSMSid_percent <- function(x){
-  p <- ggplot(x, aes(Experiment, MS.MS.Identified.... , fill = my_groups))
+MQ_summary_MSMSid_percent <- function(x, grouping = FALSE){
+  if (grouping == TRUE) {
+    p <- ggplot(x, aes(Experiment, MS.MS.Identified.... , fill = my_groups))
+  } else {
+    p <- ggplot(x, aes(Experiment, MS.MS.Identified....))
+  }
   p <- p + geom_bar(stat = "identity", position = "dodge")
   p <- p + theme_bw()
   p <- p + xlab("Sample")

@@ -13,7 +13,6 @@
 #' @export
 
 MQ_summary_MSvsMSMS <- function(x){
-  vars <- c("Experiment", "MS", "MS.MS", "my_groups")
     temp_data <- dplyr::select(x, Experiment, MS, MS.MS)
     long_data <- reshape2::melt(temp_data, id = "Experiment", measured = c("MS", "MS.MS"))
 
