@@ -15,3 +15,7 @@ Returns a density plot.
 \description{
 Uses the output from MaxQuant (evidence.txt) to plot Andromeda score distribution for the identified experiments.
 }
+\examples{
+MQ_evidence_Andromeda_score(filtered_evidence_output)
+
+}

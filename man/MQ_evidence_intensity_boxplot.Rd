@@ -10,7 +10,7 @@ MQ_evidence_intensity_boxplot(x, color_groups = FALSE)
 \item{x}{The evidence.txt file from MaxQuant output.}
 
 \item{color_groups}{Logical. Is True, colors will be assigned to the boxplots based on the
-my_groups column. Use add_groups function first to create the 'add_groups' column. Default
+my_groups column. Use add_groups function first to create the \code{\link{add_groups}} column. Default
 value is FALSE, which will give boxplots with the same color.}
 }
 \value{

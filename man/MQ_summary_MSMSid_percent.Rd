@@ -4,13 +4,17 @@
 \alias{MQ_summary_MSMSid_percent}
 \title{Percent of MSMS spectra identified using MaxQuant summary output}
 \usage{
-MQ_summary_MSMSid_percent(x)
+MQ_summary_MSMSid_percent(x, grouping = FALSE)
 }
 \arguments{
 \item{x}{The processed summary.txt output file}
+
+\item{grouping}{Default value is FALSE. If set to true, the different experiments
+will be colored based on the `my_groups` column. Use \code{\link{add_groups}} function
+to define the groups based on experiment names.}
 }
 \description{
 Reads MaxQuant summary.txt output file and plots the percentage
- of spectra matched to peptides. Use the `add_groups` function first to add groups
- based on the experiment name, and color the different raw files based on the groups.
+   of spectra matched to peptides. Use the `add_groups` function first to add groups
+   based on the experiment name, and color the different raw files based on the groups.
 }
