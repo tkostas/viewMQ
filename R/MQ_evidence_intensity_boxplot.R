@@ -6,7 +6,7 @@
 #' @return Boxplots of log10 peptidide intensity.
 #'
 #' @param x The evidence.txt file from MaxQuant output.
-#' @param color_groups Logical. Is True, colors will be assigned to the boxplots based on the
+#' @param color_groups Logical. If set to TRUE, colors will be assigned to the boxplots based on the
 #' my_groups column. Use add_groups function first to create the \code{\link{add_groups}} column. Default
 #' value is FALSE, which will give boxplots with the same color.
 #'
@@ -17,7 +17,7 @@
 
 MQ_evidence_intensity_boxplot <- function(x, color_groups = FALSE) {
   if (color_groups == TRUE) {
-    if (!("my_groups" %in% names(evidence2))) {
+    if (!("my_groups" %in% names(x))) {
       stop("Use 'add_groups' function first to assign groups based on the 'Experiment' name.", .call = FALSE)
     }
     print("Experiments will be colored based on the defined groups.")
