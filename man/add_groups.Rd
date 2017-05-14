@@ -15,10 +15,10 @@ add_groups(x, group_ids = list(All_samples = "All samples"))
 Add group identifies based on strings included in the Experiments name.
 }
 \examples{
-   # first define the group_ids list
-   group_ids <- list(GroupA = "group_A",
+# first define the group_ids list
+group_ids <- list(GroupA = "group_A",
                  GroupB = "group_B")
-   # 2nd assign different experiments into groups. Output is saved in the 'my_groups' column
-   data2 <- add_groups(data, group_ids)
+# 2nd assign different experiments into groups. Output is saved in the 'my_groups' column
+data2 <- add_groups(data, group_ids)
 
 }
