@@ -20,6 +20,7 @@ MQ_summary_isopatterns_seq_percent_rep <- function(x, grouping = FALSE){
   p <- p + theme_bw()
   p <- p + xlab("Sample")
   p <- p + ylab("Percent of isotopic patterns repeatedly sequenced (z > 1)")
+  p <- p + ylim(limits = c(0, 100))
   p <- p + ggtitle("Percent of isotopic patterns repeatedly sequenced per experiment (z > 1)")
   p <- p + theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
   p <- p + theme(legend.position = "bottom")

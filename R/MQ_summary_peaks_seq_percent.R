@@ -20,6 +20,7 @@ MQ_summary_peaks_seq_percent <- function(x, grouping = FALSE){
   p <- p + theme_bw()
   p <- p + xlab("Sample")
   p <- p + ylab("Percent of peaks sequenced")
+  p <- p + ylim(limits = c(0, 100))
   p <- p + ggtitle("Percent of peaks sequenced per experiment")
   p <- p + theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
   p <- p + theme(legend.position = "bottom")

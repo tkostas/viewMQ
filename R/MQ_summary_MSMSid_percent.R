@@ -20,6 +20,7 @@ MQ_summary_MSMSid_percent <- function(x, grouping = FALSE){
   p <- p + theme_bw()
   p <- p + xlab("Sample")
   p <- p + ylab("Percent of Spectra identified (%)")
+  p <- p + ylim(limits = c(0, 100))
   p <- p + ggtitle("Percent of MS/MS spectra identified per experiment.")
   p <- p + theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
   p <- p + theme(legend.position = "bottom")
