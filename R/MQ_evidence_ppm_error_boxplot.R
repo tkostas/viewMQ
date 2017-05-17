@@ -30,6 +30,7 @@ MQ_evidence_ppm_error_boxplot <- function(x, color_groups = FALSE) {
   p <- p + theme_bw()
   p <- p + xlab("Sample")
   p <- p + ylab("Peptide ppm error")
+  p <- p + geom_hline(yintercept = 0)
   p <- p + ggtitle("ppm error distribution per Experiment.")
   p <- p + theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
   p <- p + theme(legend.position = "bottom")

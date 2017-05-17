@@ -17,6 +17,7 @@ MQ_summary_MSMSid_percent <- function(x, grouping = FALSE){
     p <- ggplot(x, aes(Experiment, MS.MS.Identified....))
   }
   p <- p + geom_bar(stat = "identity", position = "dodge")
+  p <- p + geom_text(aes(label = MS.MS.Identified....), vjust = -0.25)
   p <- p + theme_bw()
   p <- p + xlab("Sample")
   p <- p + ylab("Percent of Spectra identified (%)")

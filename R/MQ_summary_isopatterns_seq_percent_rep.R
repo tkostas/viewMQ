@@ -17,6 +17,7 @@ MQ_summary_isopatterns_seq_percent_rep <- function(x, grouping = FALSE){
     p <- ggplot(x, aes(Experiment, Isotope.Patterns.Repeatedly.Sequenced....))
   }
   p <- p + geom_bar(stat = "identity", position = "dodge")
+  p <- p + geom_text(aes(label = Isotope.Patterns.Repeatedly.Sequenced....), vjust = -0.25)
   p <- p + theme_bw()
   p <- p + xlab("Sample")
   p <- p + ylab("Percent of isotopic patterns repeatedly sequenced (z > 1)")

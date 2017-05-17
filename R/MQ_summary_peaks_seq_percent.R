@@ -17,6 +17,7 @@ MQ_summary_peaks_seq_percent <- function(x, grouping = FALSE){
     p <- ggplot(x, aes(Experiment, Peaks.Sequenced....))
   }
   p <- p + geom_bar(stat = "identity", position = "dodge")
+  p <- p + geom_text(aes(label = Peaks.Sequenced....), vjust = -0.25)
   p <- p + theme_bw()
   p <- p + xlab("Sample")
   p <- p + ylab("Percent of peaks sequenced")
