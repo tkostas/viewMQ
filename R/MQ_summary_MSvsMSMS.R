@@ -6,6 +6,7 @@
 #' @return A barplot
 #'
 #' @param x The summary.txt file from MaxQuant output.
+#' @param lab_size Size of the text labels.
 #'
 #' @example
 #' MQ_summary_MSvsMSMS(data)
