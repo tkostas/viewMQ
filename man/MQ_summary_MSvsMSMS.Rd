@@ -4,12 +4,14 @@
 \alias{MQ_summary_MSvsMSMS}
 \title{View number of MS1 and MS2 spectra per sample from summary.txt file}
 \usage{
-MQ_summary_MSvsMSMS(x, lab_size = 8)
+MQ_summary_MSvsMSMS(x, num_size = 4, num_angle = 0)
 }
 \arguments{
 \item{x}{The summary.txt file from MaxQuant output.}
 
-\item{lab_size}{Size of the text labels.}
+\item{num_size}{Numeric label size. Default value is 4.}
+
+\item{num_angle}{Numeric label label angle. Default value is 0.}
 }
 \value{
 A barplot

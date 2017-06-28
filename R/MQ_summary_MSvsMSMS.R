@@ -6,20 +6,21 @@
 #' @return A barplot
 #'
 #' @param x The summary.txt file from MaxQuant output.
-#' @param lab_size Size of the text labels.
+#' @param num_size Numeric label size. Default value is 4.
+#' @param num_angle Numeric label label angle. Default value is 0.
 #'
 #' @example
 #' MQ_summary_MSvsMSMS(data)
 #'
 #' @export
 
-MQ_summary_MSvsMSMS <- function(x, lab_size = 8){
+MQ_summary_MSvsMSMS <- function(x, num_size = 4, num_angle = 0){
     temp_data <- dplyr::select(x, Experiment, MS, MS.MS)
     long_data <- reshape2::melt(temp_data, id = "Experiment", measured = c("MS", "MS.MS"))
 
   p <- ggplot2::ggplot(long_data, aes(Experiment, value, fill = variable))
   p <- p + geom_bar(stat = "identity", position = "dodge")
-  p <- p + geom_text(aes(label = value), position = position_dodge(width = 0.9), vjust = -0.25, size = lab_size)
+  p <- p + geom_text(aes(label = value), position = position_dodge(width = 0.9), vjust = -0.25, size = num_size, angle = num_angle)
   p <- p + theme_bw()
   p <- p + xlab("Sample")
   p <- p + ylab("Number of spectra")
