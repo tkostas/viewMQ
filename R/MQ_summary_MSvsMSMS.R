@@ -12,13 +12,13 @@
 #'
 #' @export
 
-MQ_summary_MSvsMSMS <- function(x){
+MQ_summary_MSvsMSMS <- function(x, lab_size = 8){
     temp_data <- dplyr::select(x, Experiment, MS, MS.MS)
     long_data <- reshape2::melt(temp_data, id = "Experiment", measured = c("MS", "MS.MS"))
 
   p <- ggplot2::ggplot(long_data, aes(Experiment, value, fill = variable))
   p <- p + geom_bar(stat = "identity", position = "dodge")
-  p <- p + geom_text(aes(label = value), position = position_dodge(width = 0.9), vjust = -0.25)
+  p <- p + geom_text(aes(label = value), position = position_dodge(width = 0.9), vjust = -0.25, size = lab_size)
   p <- p + theme_bw()
   p <- p + xlab("Sample")
   p <- p + ylab("Number of spectra")
