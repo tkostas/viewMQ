@@ -5,7 +5,7 @@
 \title{View number of MS1 and MS2 spectra per sample from summary.txt file}
 \usage{
 MQ_summary_MSvsMSMS(x, num_size = 4, num_angle = 0, num_vjust = -0.25,
-  num_hjust = 1)
+  num_hjust = 0.5, ylim = c(0, NA))
 }
 \arguments{
 \item{x}{The summary.txt file from MaxQuant output.}
@@ -16,7 +16,9 @@ MQ_summary_MSvsMSMS(x, num_size = 4, num_angle = 0, num_vjust = -0.25,
 
 \item{num_vjust}{Vertical justification for numeric label. Default value is -0.25.}
 
-\item{num_hjust}{Horizontal justification for numeric label. Default value is 0.}
+\item{num_hjust}{Horizontal justification for numeric label. Default value is 0.5.}
+
+\item{ylim}{Y-axis limits. Vector of two elements with default values \code{c(0, NA)}.}
 }
 \value{
 A barplot

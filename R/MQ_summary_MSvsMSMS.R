@@ -9,14 +9,15 @@
 #' @param num_size Numeric label size. Default value is 4.
 #' @param num_angle Numeric label label angle. Default value is 0.
 #' @param num_vjust Vertical justification for numeric label. Default value is -0.25.
-#' @param num_hjust Horizontal justification for numeric label. Default value is 0.
+#' @param num_hjust Horizontal justification for numeric label. Default value is 0.5.
+#' @param ylim Y-axis limits. Vector of two elements with default values \code{c(0, NA)}.
 #'
 #' @example
 #' MQ_summary_MSvsMSMS(data)
 #'
 #' @export
 
-MQ_summary_MSvsMSMS <- function(x, num_size = 4, num_angle = 0, num_vjust = -0.25, num_hjust = 1){
+MQ_summary_MSvsMSMS <- function(x, num_size = 4, num_angle = 0, num_vjust = -0.25, num_hjust = 0.5, ylim = c(0, NA)){
     columns_vector <- c("Experiment", "MS", "MS.MS")
     temp_data <- x[,columns_vector]
     long_data <- reshape2::melt(temp_data, id = "Experiment", measured = c("MS", "MS.MS"))
@@ -34,5 +35,6 @@ MQ_summary_MSvsMSMS <- function(x, num_size = 4, num_angle = 0, num_vjust = -0.2
   p <- p + theme(legend.position = "bottom")
   p <- p + theme(legend.key.size = unit(0.2, "cm"))
   p <- p + theme(legend.text = element_text(size = 8))
+  p <- p + ylim(limits = ylim)
   print(p)
 }
