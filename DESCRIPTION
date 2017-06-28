@@ -10,7 +10,6 @@ Depends:
 Imports:
     colorspace,
     DBI,
-    dplyr,
     ggplot2,
     gtable,
     labeling,
