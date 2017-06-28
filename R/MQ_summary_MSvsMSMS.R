@@ -15,7 +15,8 @@
 #' @export
 
 MQ_summary_MSvsMSMS <- function(x, num_size = 4, num_angle = 0){
-    temp_data <- dplyr::select(x, Experiment, MS, MS.MS)
+    columns_vector <- c("Experiment", "MS", "MS.MS")
+    temp_data <- x[,columns_vector]
     long_data <- reshape2::melt(temp_data, id = "Experiment", measured = c("MS", "MS.MS"))
 
   p <- ggplot2::ggplot(long_data, aes(Experiment, value, fill = variable))
