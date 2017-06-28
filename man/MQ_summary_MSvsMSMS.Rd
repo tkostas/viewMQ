@@ -4,7 +4,7 @@
 \alias{MQ_summary_MSvsMSMS}
 \title{View number of MS1 and MS2 spectra per sample from summary.txt file}
 \usage{
-MQ_summary_MSvsMSMS(x, num_size = 4, num_angle = 0, num_vjust = 0.5,
+MQ_summary_MSvsMSMS(x, num_size = 4, num_angle = 0, num_vjust = -0.25,
   num_hjust = 1)
 }
 \arguments{
@@ -14,9 +14,9 @@ MQ_summary_MSvsMSMS(x, num_size = 4, num_angle = 0, num_vjust = 0.5,
 
 \item{num_angle}{Numeric label label angle. Default value is 0.}
 
-\item{num_vjust}{Vertical justification for numeric label. Default value is 0.5.}
+\item{num_vjust}{Vertical justification for numeric label. Default value is -0.25.}
 
-\item{num_hjust}{Horizontal justification for numeric label. Default value is 1.}
+\item{num_hjust}{Horizontal justification for numeric label. Default value is 0.}
 }
 \value{
 A barplot
