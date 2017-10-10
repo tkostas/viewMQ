@@ -18,7 +18,6 @@ Imports:
     plyr,
     Rcpp,
     reshape2,
-    rlang,
     scales,
     tibble
 License: GPL-3
