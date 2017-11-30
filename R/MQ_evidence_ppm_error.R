@@ -13,7 +13,6 @@
 
 MQ_evidence_ppm_error <- function(x) {
   names(x) <- tolower(names(x))
-  print(names(x))
   er.ppm <- ggplot(data = x, aes(x = mass.error..ppm., color = experiment))
   er.ppm <- er.ppm + geom_density()
   er.ppm <- er.ppm + theme_bw()
