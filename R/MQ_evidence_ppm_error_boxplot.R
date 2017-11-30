@@ -16,15 +16,16 @@
 #' @export
 
 MQ_evidence_ppm_error_boxplot <- function(x, color_groups = FALSE) {
+  names(x) <- tolower(names(x))
   if (color_groups == TRUE) {
     if (!("my_groups" %in% names(x))) {
       stop("Use 'add_groups' function first to assign groups based on the 'Experiment' name.", .call = FALSE)
     }
     print("Experiments will be colored based on the defined groups.")
-    p <- ggplot(x, aes(x = Experiment, y = Mass.Error..ppm., fill = my_groups))
+    p <- ggplot(x, aes(x = experiment, y = mass.error..ppm., fill = my_groups))
 
   } else {
-    p <- ggplot(x, aes(x = Experiment, y = Mass.Error..ppm.))
+    p <- ggplot(x, aes(x = experiment, y = mass.error..ppm.))
   }
   p <- p + geom_boxplot()
   p <- p + theme_bw()

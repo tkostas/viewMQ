@@ -12,7 +12,9 @@
 #' @export
 
 MQ_evidence_ppm_error <- function(x) {
-  er.ppm <- ggplot(data = x, aes(x = Mass.Error..ppm., color = Experiment))
+  names(x) <- tolower(names(x))
+  print(names(x))
+  er.ppm <- ggplot(data = x, aes(x = mass.error..ppm., color = experiment))
   er.ppm <- er.ppm + geom_density()
   er.ppm <- er.ppm + theme_bw()
   er.ppm <- er.ppm + xlab("Mass ppm error")
